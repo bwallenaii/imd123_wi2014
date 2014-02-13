@@ -1,0 +1,47 @@
+<html>
+<head>
+	<title>Class Size Helper</title>
+	<script>
+		var desiredClassSize;
+		var actualClassSize;
+
+		desiredClassSize = prompt("What is your ideal class size?");
+		desiredClassSize = Number(desiredClassSize);
+		while(isNaN(desiredClassSize) || 
+			desiredClassSize < 0 || 
+			Math.floor(desiredClassSize) != desiredClassSize)
+		{
+			alert("Invalid class size. Please provide a positive integer.");
+			desiredClassSize = Number(prompt("What is your ideal class size?"));
+		}
+
+		actualClassSize = prompt("What is your actual class size?");
+		actualClassSize = Number(actualClassSize);
+		while(isNaN(actualClassSize) || 
+			actualClassSize < 0 ||
+			Math.floor(actualClassSize) != actualClassSize)
+		{
+			alert("Invalid class size. Please provide a positive number.");
+			actualClassSize = Number(prompt("What is your actual class size?"));
+		}
+
+		if(desiredClassSize < actualClassSize)
+		{
+			alert("Your class is too large.");
+		}
+		else if(desiredClassSize == actualClassSize)
+		{
+			alert("Your class is the ideal size.");
+		}
+		else
+		{
+			alert("Your class is too small.");
+		}
+
+		alert("Aren't you glad I was here to help you figure this out?");
+	</script>
+</head>
+<body>
+
+</body>
+</html>

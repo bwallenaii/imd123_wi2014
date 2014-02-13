@@ -1,0 +1,47 @@
+<html>
+<head>
+	<title>BabyNames</title>
+	<script>
+		var babyNames = [];
+		var currentName;
+		var ratings = [];
+		var currentRating;
+		var highestRating = 0;
+		var bestIndex = 0;
+
+		//Collect the list of names
+		while(currentName != "N")
+		{
+			currentName = prompt("Please provide a name you are considering. Type \"N\" when done.");
+			babyNames.push(currentName);
+		}
+		//get rid of the extra "N" in the array
+		console.log(babyNames);
+		babyNames.pop();
+		console.log(babyNames);
+		//collect the ratings for the names
+		for(var i = 0;i < babyNames.length;i++)
+		{
+			currentRating = prompt("Provide a rating 1-10 for " + babyNames[i]);
+			ratings.push(Number(currentRating));
+		}
+
+	</script>
+</head>
+<body>
+	<script>
+		//output the results
+		for(i = 0; i < babyNames.length;++i)
+		{
+			document.write("<p>" + babyNames[i] + " is rated " + ratings[i] + "</p>");
+			if(ratings[i] > highestRating)
+			{
+				highestRating = ratings[i];
+				bestIndex = i;
+			}
+		}
+		document.write("<p>You should probably name the kid " + babyNames[bestIndex] + "</p>");
+	</script>
+
+</body>
+</html>

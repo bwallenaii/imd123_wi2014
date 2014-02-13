@@ -1,0 +1,33 @@
+START
+	Declare UnsignedInt desiredClassSize
+	Declare UnsignedInt actualClassSize
+
+	Output "What size of class do you prefer?"
+	Input desiredClassSize
+	//check for valid data
+	while(desiredClassSize is not a number OR desiredClassSize < 0)
+		Output "Invalid class size. Please provide a positive number."
+		Output "What size of class do you prefer?"
+		Input desiredClassSize
+	end while
+
+	Output "What is the actual size of the class?"
+	Input actualClassSize
+	//check for valid data
+	while(actualClassSize is not a number OR actualClassSize < 0)
+		Output "Invalid class size. Please provide a positive number."
+		Output "What is the actual size of the class?"
+		Input actualClassSize
+	end while
+
+	if(desiredClassSize < actualClassSize)
+		Output "Your class is too large."
+	else if(desiredClassSize == actualClassSize)
+		Output "Your class is the ideal size."
+	else
+		Output "Your class is too small."
+	end if
+
+	Output "Aren't you glad I was here to help you figure this out?"
+
+END

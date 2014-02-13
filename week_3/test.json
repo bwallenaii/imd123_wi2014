@@ -1,0 +1,14 @@
+[
+	{
+		"firstName":"Bob",
+		"lastName":"Hendricks",
+		"birthDate":"1933-06-07",
+		"deathDate":"2013-11-12"
+	},
+	{
+		"firstName":"Fred",
+		"lastName":"Hendricks",
+		"birthDate":"1999-06-07",
+		"deathDate":""
+	}
+]

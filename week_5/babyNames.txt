@@ -1,0 +1,26 @@
+
+
+START
+	Declare String babyNames[]
+	Declare String currentName
+	Declare Integer ratings[]
+	Declare Integer currentRating
+
+	while currentName != "N"
+		Output "Please provide a name you are considering. Type \"N\" when done."
+		Input currentName
+		babyNames.push(currentName)
+	endwhile
+
+	babyNames.pop()
+
+	for i = 0 to babyNames.length
+		Output "Provide a rating 1-10 for ", babyNames[i]
+		Input currentRating
+		ratings.push(currentRating)
+	endfor
+
+	for i = 0 to babyNames.length
+		Output babyNames[i], " is rated ", ratings[i]
+	endfor
+END

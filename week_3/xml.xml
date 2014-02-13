@@ -1,0 +1,17 @@
+<xml>
+	<entry>
+		<firstName>Bob</firstName>
+		<lastName>Something</lastName>
+		<birthDate>1933-12-07</birthDate>
+		<deathDate>2013-11-12</deathDate>
+		<desctiption><![CDATA[
+			He was a <strong>nice<strong> guy.
+			]]></description>
+	</entry>
+	<entry>
+		<firstName>Fred</firstName>
+		<lastName>Hendricks</lastName>
+		<birthDate>1999-05-26</birthDate>
+		<deathDate></deathDate>
+	</entry>
+</xml>

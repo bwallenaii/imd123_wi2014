@@ -1,0 +1,17 @@
+START
+
+	Declare Number x
+
+	Output "Give me a number for x"
+	Input x
+
+	if(x < 3)
+		Output "x is small"
+	else if (x == 3)
+		Output "x is medium"
+	else
+		Output "x is large"
+	end if
+
+	Output "That's about the size of it."
+END

@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title>Example 1</title>
+	<script>
+		var inputNumber;
+		var answer;
+
+		inputNumber = prompt("Give me a number");
+		inputNumber = Number(inputNumber);
+		//TODO: if not a number, make it 0
+		if(isNaN(inputNumber))
+		{
+			inputNumber = 0;
+		}
+		answer = inputNumber * 2;
+		alert("Your doubled number is " + answer);
+	</script>
+</head>
+<body>
+
+</body>
+</html>
