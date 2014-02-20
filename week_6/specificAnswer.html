@@ -1,0 +1,46 @@
+<html>
+<head>
+	<title>Select One</title>
+	<script>
+	    /**
+	     * Declare String favCheese = null
+	     * Declare Booldean validCheese = false
+	     * Declare String cheeses[] = "gorgonzola", "cheddar", "muenster", "gouda", "pepperjack", "swiss", "string", "mozzarella"
+	     * 
+	     * while !validCheese
+	     *      Output "What is your favorite of the following cheeses? \r\n ", cheeses
+	     *      Input favCheese
+	     * 
+	     *      for i to cheeses.length
+	     *          if toLower(favCheese) == cheeses[i]
+	     *              validCheese = true
+	     *          endif
+	     *      endFor
+	     * endWhile
+	     * 
+	     * Ouptut "Your favorite cheese is ", favCheese
+	     */
+	    var favCheese = null;
+	    var validCheese = false;
+	    var cheeses = ["gorgonzola", "cheddar", "muenster", "gouda", "pepperjack", "swiss", "string", "mozzarella"];
+	    
+	    while(!validCheese)
+	    {
+	        favCheese = prompt("What is your favorite of the following cheeses? \r\n " + cheeses);
+	        
+	        for(var i = 0; i < cheeses.length;++i)
+	        {
+	            if(favCheese.toLowerCase() == cheeses[i])
+	            {
+	                validCheese = true;
+	            }
+	        }
+	    }
+	    
+	    alert("Your favorite cheese is " + favCheese);
+	</script>
+</head>
+<body>
+
+</body>
+</html>
