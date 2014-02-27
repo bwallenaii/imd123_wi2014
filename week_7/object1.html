@@ -1,0 +1,136 @@
+<html>
+<head>
+	<title>Object Example 1</title>
+	<script>
+	    /**
+	     * PROBLEM: Write a program that takes orders for cookies. Each order
+	     * should be stored in an array and the user should be able to add
+	     * as many orders as they want. Print orders on screen when done.
+	     */
+	    /**
+	     * PSEUDO-CODE
+	     * 
+	     * START
+	     *      DECLARE Object cookieOrders[]
+	     *      DECLARE Object cookieOrder
+	     *      DECLARE Boolean anotherOrder = true
+	     *      DECLARE String userResponse
+	     * 
+	     *      while (anotherOrder)
+	     *          while(!cookieOrder.type OR cookieOrder.type is not a String)
+	     *              Output "What type of cookie would you like?"
+	     *              Input cookieOrder.type
+	     *          endWhile
+	     * 
+	     *          Output "What size of cookie would you like? (small, medium, large, pizza)"
+	     *          Input cookieOrder.size
+	     *          
+	     *          Output "What kind of frosting would you like? (N for none)"
+	     *          Input cookieOrder.frosting
+	     * 
+	     *          if(cookieOrder.frosting.toLower() == "n")
+	     *              cookieOrder.frosting = null
+	     *          endIf
+	     * 
+	     *          Output "What kind of sprinkles would you like? (N for none)"
+	     *          Input cookieOrder.sprinkles
+	     * 
+	     *          if(cookieOrder.sprinkles.toLower() == "n")
+	     *              cookieOrder.sprinkles = null
+	     *          endIf
+	     * 
+	     *          Output "How many of these cookies would you like?"
+	     *          Input cookieOrder.qty
+	     *          
+	     *          cookieOrders.push(cookieOrder)
+	     *          cookieOrder = new Object
+	     * 
+	     *          Output "Would you like another type of cookie? (Y/N)"
+	     *          Input userResponse
+	     *          
+	     *          if(userResponse.toLower() == "n")
+	     *              anotherOrder = false
+	     *          endIf
+	     *      endWhile
+	     *      
+	     *      for i to cookieOrders.length
+	     *          Output "Type: ", cookieOrders[i].type, "\r\n"
+	     *          Output "Size: ", cookieOrders[i].size, "\r\n"
+	     * 
+	     *          if(cookieOrders[i].frosting)
+	     *              Output "Frosting: ", cookieOrders[i].frosting, "\r\n"
+	     *          endIf
+	     * 
+	     *          if(cookieOrders[i].sprinkles)
+	     *              Output "Sprinkles: ", cookieOrders[i].sprinkles, "\r\n"
+	     *          endIf
+	     * 
+	     *          Ouptut "Amount: ", cookieOrders[i].qty, "\r\n"
+	     *      endFor
+	     * END
+	     */
+	    
+	    var cookieOrders = [];
+	    var cookieOrder = {};
+	    var anotherOrder = true;
+	    var userResponse;
+	    
+	    
+	    while(anotherOrder)
+	    {
+	        while(!cookieOrder.type || typeof cookieOrder.type != "string")
+	        {
+	            cookieOrder.type = prompt("What type of cookie would you like?");
+	        }
+	        
+	        cookieOrder.size = prompt("What size of cookie would you like? (small, medium, large, pizza)");
+	        cookieOrder.frosting = prompt("What kind of frosting would you like? (N for none)");
+	        if(cookieOrder.frosting.toLowerCase() == "n")
+	        {
+	            cookieOrder.frosting = null;
+	        }
+	        cookieOrder.sprinkles = prompt("What kind of sprinkles would you like? (N for none)");
+	        if(cookieOrder.sprinkles.toLowerCase() == "n")
+	        {
+	            cookieOrder.sprinkles = null;
+	        }
+	        
+	        cookieOrder.qty = prompt("How many of these cookies would you like?");
+	        
+	        cookieOrders.push(cookieOrder);
+	        cookieOrder = {};
+	        /*
+	        userResponse = prompt("Would you like another type of cookie? (Y/N)");
+	        
+	        if(userResponse.toLowerCase() == "n")
+	        {
+	            anotherOrder = false;
+	        }*/
+	        anotherOrder = confirm("Would you like another type of cookie?");
+	    }
+	</script>
+</head>
+<body>
+
+    <script>
+        for(var i = 0; i < cookieOrders.length;++i)
+        {
+            document.write("<p>");
+            document.write("Type: " + cookieOrders[i].type + "\r\n");
+            document.write("Size: " + cookieOrders[i].size + "<br />");
+            if(cookieOrders[i].frosting)
+            {
+                document.write("Frosting: " + cookieOrders[i].frosting + "<br />")
+            }
+            if(cookieOrders[i].sprinkles)
+            {
+                document.write("Sprinkles: " + cookieOrders[i].sprinkles + "<br />")
+            }
+            document.write("Amount: " + cookieOrders[i].qty + "<br />");
+            document.write("</p>")
+        }
+        
+    </script>
+
+</body>
+</html>
