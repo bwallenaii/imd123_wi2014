@@ -1,0 +1,29 @@
+<html>
+<head>
+	<title></title>
+	<script>
+	    function square(n1)
+	    {
+	        n1 = Number(n1);
+	        if(isNaN(n1))
+	        {
+	            n1 = 0;
+	        }
+	        var ret = n1*n1;
+	        return ret;
+	    }
+	    
+	</script>
+</head>
+<body>
+    <script>
+        document.write(square(9));
+        document.write("<br />");
+        document.write(square("7"));
+        document.write("<br />");
+        document.write(square("chicken"));
+        document.write("<br />");
+        
+    </script>
+</body>
+</html>

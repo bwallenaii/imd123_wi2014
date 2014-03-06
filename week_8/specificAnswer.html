@@ -1,0 +1,55 @@
+<html>
+<head>
+	<title>Select One</title>
+	<script>
+	    /**
+	     * Function getSelectedItem(String availableItems[], String request)
+	     *      Declare String userResponse = ""
+	     *      Declare Boolean validResponse = false
+	     * 
+	     *      while !validResponse
+	     *          Output "What is your favorite of the following cheeses? \r\n ", cheeses
+	     *          Input userResponse
+	     * 
+	     *          for i to availableItems.length
+	     *              if toLower(userResponse) == toLower(availableItems[i])
+	     *                  validResponse = true
+	     *              endif
+	     *          endFor
+	     *      endWhile
+	     * 
+	     * return userResponse
+	     */
+	     
+	     function getSelectedItem(availableItems, request)
+	     {
+	        userResponse = "";
+	        validResponse = false;
+	        while(!validResponse)
+    	    {
+    	        userResponse = prompt(request);
+    	        
+    	        for(var i = 0; i < availableItems.length;++i)
+    	        {
+    	            if(userResponse.toLowerCase() == availableItems[i].toLowerCase())
+    	            {
+    	                validResponse = true;
+    	            }
+    	        }
+    	    }
+    	    return userResponse;
+	     }
+	     var favCheese = null;
+	     var cheeses = ["gorgonzola", "cheddar", "muenster", "gouda", "pepperjack", "swiss", "string", "mozzarella"];
+	     var yesNo = ["yes","no","Y","N"];
+	    favCheese = getSelectedItem(cheeses, "What is your favorite cheese of " + cheeses);
+	    var rice = getSelectedItem(yesNo, "Would you like to eat some fried rice?");
+	    var soup = getSelectedItem(yesNo, "Would you like to eat some chicken soup?");
+	    
+	    alert("Your favorite cheese is " + favCheese);
+	</script>
+</head>
+<body>
+
+</body>
+</html>

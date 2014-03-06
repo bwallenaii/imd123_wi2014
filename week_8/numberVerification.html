@@ -1,0 +1,44 @@
+<html>
+<head>
+	<title>Number Verifications</title>
+	<script>
+	    /**
+	     * Function Number getRange(Number low, Number high, String request)
+	     *      Declare Number userNumber
+	     * 
+	     *      if(!request)
+	     *          request = "Please provide a number between ", low, " and ", high
+	     *      endif
+	     *      while userNumber < low OR userNumber > high OR userNumber is not a number
+	     *          Output request
+	     *          Input userNumber
+	     *      endwhile
+	     * return userNumber
+	     */
+	    function getRange(low, high, request)
+	    {
+	        var userNumber;
+	        if(!request)
+	        {
+	            request = "Please provide a number between " + low + " and " + high
+	        }
+	        while(userNumber < low || userNumber > high || isNaN(userNumber))
+	        {
+	            userNumber = prompt(request);
+	            userNumber = Number(userNumber);
+	        }
+	        return userNumber;
+	    }
+	    
+	    //program starts here
+	    var rating = getRange(0, 100, "Please rate this survey from 0 to 100");
+	    var smallRate = getRange(0,5);
+	    alert("You chose " + rating);
+	    alert("Then you chose " + smallRate);
+	</script>
+</head>
+<body>
+
+&#107;
+</body>
+</html>
